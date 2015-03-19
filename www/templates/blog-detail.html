@@ -8,11 +8,12 @@
     <ion-content>
         <div class="card-wrap">
             <div class="card full-card">
-                <img ng-src="{{blog.image}}">
-                <h2>{{blog.name}}</h2>
+              <div class="item item-body">
+                <!--<img class="full-image" ng-src="{{blog.image}}">-->
                 <p>
                   <div marked ng-include="md"></div>
                 </p>
+                </div>
             </div>
         </div>
     </ion-content>
