@@ -41,7 +41,7 @@ angular.module('starter', ['ionic', 'ngMaterial', 'starter.controllers', 'starte
   .state('tab.home', {
     url: '/home',
     views: {
-      'tab-dash': {
+      'tab-home': {
         templateUrl: 'templates/tab-homepage.html',
         controller: 'DashCtrl'
       }
@@ -51,7 +51,7 @@ angular.module('starter', ['ionic', 'ngMaterial', 'starter.controllers', 'starte
   .state('tab.blog', {
       url: '/blog',
       views: {
-        'tab-chats': {
+        'tab-blog': {
           templateUrl: 'templates/tab-blog.html',
           controller: 'BlogCtrl'
         }
@@ -60,7 +60,7 @@ angular.module('starter', ['ionic', 'ngMaterial', 'starter.controllers', 'starte
     .state('tab.blog-detail', {
       url: '/blog/:blogId',
       views: {
-        'tab-chats': {
+        'tab-blog': {
           templateUrl: 'templates/blog-detail.html',
           controller: 'BlogDetailCtrl'
         }
