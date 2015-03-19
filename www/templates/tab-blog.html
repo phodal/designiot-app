@@ -1,11 +1,9 @@
 <ion-view view-title="文章">
     <ion-content>
         <ion-list>
-            <ion-item class="item" ng-repeat="blog in blogs" type="item-text-wrap" href="#/tab/blog/{{blog.id}}">
-                <h2>{{blog.name}}</h2>
-                <p>
-                    {{blog.lastText}}
-                </p>
+            <ion-item class="item item-icon-right" ng-repeat="blog in blogs" type="item-text-wrap" href="#/tab/blog/{{blog.id}}">
+                <h2>{{blog.id}} {{blog.name}}</h2>
+                <i class="icon ion-ios-arrow-right"></i>
             </ion-item>
         </ion-list>
     </ion-content>
