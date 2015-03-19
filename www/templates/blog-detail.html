@@ -6,12 +6,14 @@
 -->
 <ion-view view-title="{{blog.name}}">
     <ion-content>
-        <img ng-src="{{blog.image}}">
-
-        <h2>{{blog.name}}</h2>
-
-        <p>
-            {{blog.lastText}}
-        </p>
+        <div class="card-wrap">
+            <div class="card full-card">
+                <img ng-src="{{blog.image}}">
+                <h2>{{blog.name}}</h2>
+                <p>
+                    {{blog.lastText}}
+                </p>
+            </div>
+        </div>
     </ion-content>
 </ion-view>
