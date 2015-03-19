@@ -49,16 +49,16 @@ angular.module('starter', ['ionic', 'ngMaterial', 'starter.controllers', 'starte
   })
 
   .state('tab.chats', {
-      url: '/chats',
+      url: '/blog',
       views: {
         'tab-chats': {
           templateUrl: 'templates/tab-blog.html',
-          controller: 'ChatsCtrl'
+          controller: 'BlogCtrl'
         }
       }
     })
     .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+      url: '/blog/:blogId',
       views: {
         'tab-chats': {
           templateUrl: 'templates/blog-detail.html',
