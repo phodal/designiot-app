@@ -48,7 +48,7 @@ angular.module('starter', ['ionic', 'ngMaterial', 'starter.controllers', 'starte
     }
   })
 
-  .state('tab.chats', {
+  .state('tab.blog', {
       url: '/blog',
       views: {
         'tab-chats': {
@@ -57,12 +57,12 @@ angular.module('starter', ['ionic', 'ngMaterial', 'starter.controllers', 'starte
         }
       }
     })
-    .state('tab.chat-detail', {
+    .state('tab.blog-detail', {
       url: '/blog/:blogId',
       views: {
         'tab-chats': {
           templateUrl: 'templates/blog-detail.html',
-          controller: 'ChatDetailCtrl'
+          controller: 'BlogDetailCtrl'
         }
       }
     })

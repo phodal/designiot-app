@@ -4,12 +4,9 @@ angular.module('starter.controllers', [])
 
 .controller('BlogCtrl', function($scope, Blog) {
   $scope.blogs = Blog.all();
-  $scope.remove = function(chat) {
-	  Blog.remove(chat);
-  }
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Blog) {
+.controller('BlogDetailCtrl', function($scope, $stateParams, Blog) {
   $scope.blog = Blog.get($stateParams.blogId);
 })
 

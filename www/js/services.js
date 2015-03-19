@@ -35,9 +35,6 @@ angular.module('starter.services', [])
     all: function() {
       return blogs;
     },
-    remove: function(blog) {
-      chats.splice(blogs.indexOf(blog), 1);
-    },
     get: function(blogId) {
       for (var i = 0; i < blogs.length; i++) {
         if (blogs[i].id === parseInt(blogId)) {
