@@ -7,12 +7,8 @@ angular.module('starter.controllers', [])
 })
 
 .controller('BlogDetailCtrl', function($scope, $stateParams, Blog) {
-    Blog.async($stateParams.blogId).then(function(data){
-      var blog = Blog.get($stateParams.blogId);
-      blog.id = $stateParams.blogId;
-      blog.lastText = data;
-      $scope.blog = blog;
-    })
+    $scope.md ='assets/' + $stateParams.blogId + '.md';
+    $scope.blog = Blog.get($stateParams.blogId);
 })
 
 .controller('AccountCtrl', function($scope) {

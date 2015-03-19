@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic','hc.marked', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -10,6 +10,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   });
 })
+
+.config(['markedProvider', function (markedProvider) {
+  markedProvider.setOptions({
+    gfm: true,
+    tables: true,
+    highlight: function (code) {
+      return hljs.highlightAuto(code).value;
+    }
+  })
+}])
 
 .config(function($ionicConfigProvider){
 	$ionicConfigProvider.tabs.position('bottom');
