@@ -5,15 +5,13 @@
   The Friends service returns an array of friend data
 -->
 <ion-view view-title="{{blog.name}}">
-  <ion-content class="padding">
-      <md-card>
-          <img ng-src="{{blog.image}}">
-          <md-card-content >
-              <h2>{{blog.name}}</h2>
-              <p>
-                  {{blog.lastText}}
-              </p>
-          </md-card-content>
-      </md-card>
-  </ion-content>
+    <ion-content>
+        <img ng-src="{{blog.image}}">
+
+        <h2>{{blog.name}}</h2>
+
+        <p>
+            {{blog.lastText}}
+        </p>
+    </ion-content>
 </ion-view>
