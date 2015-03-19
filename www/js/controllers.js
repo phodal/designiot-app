@@ -7,7 +7,12 @@ angular.module('starter.controllers', [])
 })
 
 .controller('BlogDetailCtrl', function($scope, $stateParams, Blog) {
-  $scope.blog = Blog.get($stateParams.blogId);
+    Blog.async($stateParams.blogId).then(function(data){
+      var blog = Blog.get($stateParams.blogId);
+      blog.id = $stateParams.blogId;
+      blog.lastText = data;
+      $scope.blog = blog;
+    })
 })
 
 .controller('AccountCtrl', function($scope) {

@@ -1,9 +1,6 @@
 angular.module('starter.services', [])
 
-.factory('Blog', function() {
-  // Might use a resource here that returns a JSON array
-
-  // Some fake testing data
+.factory('Blog', function($http, $q) {
   var blogs = [{
     id: 0,
     name: 'Ben Sparrow',
@@ -35,6 +32,16 @@ angular.module('starter.services', [])
     all: function() {
       return blogs;
     },
+	  async: function(file_name) {
+		  var def = $q.defer();
+		  $http.get('assets/' + file_name + '.md')
+			  .success(function (response) {
+				  def.resolve(response);
+			  }).error(function () {
+				  def.reject("Failed to get albums");
+			  });
+		  return def.promise;
+	  },
     get: function(blogId) {
       for (var i = 0; i < blogs.length; i++) {
         if (blogs[i].id === parseInt(blogId)) {
