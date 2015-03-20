@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.phodal.designiot" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.phodal.designiot" version="0.0.1"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0"
+        versionCode = "101"
+  >
   <name>物联网系统设计</name>
   <description>
-        An Ionic Framework and Cordova project.
-    </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
-    </author>
+  设计物联网系统是件有意思的事情，它需要考虑到软件、硬件、通讯等多个不同方面。通过探索不同的语言，不同的框架，从而形成不同的解决方案。
+
+  在这里，我们将对设计物联网系统有一个简单的介绍，并探讨如何设计一个最小的物联网系统
+  </description>
+  <author email="h@phodal.com" href="http://www.phodal.com/">
+    Phodal Huang
+  </author>
   <content src="index.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
