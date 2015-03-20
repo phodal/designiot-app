@@ -11,7 +11,7 @@
         获取
       </div>
       <div class="item item-input">
-        <form name="getData" action="#" ng-controller="FlaskCtrl">
+        <form novalidate name="getData" action="#" ng-controller="FlaskCtrl">
           <input type="text" placeholder="ID: 如phodal" ng-model="uid">
           <button class="button button-block button-positive" ng-click="get(uid)">获取</button>
         </form>
@@ -20,12 +20,15 @@
         发送
       </div>
       <div class="item item-input">
-        <form name="postData" action="#" ng-controller="FlaskCtrl">
+        <form novalidate name="postData" action="#" ng-controller="FlaskCtrl">
           <input type="text" placeholder="数据" ng-model="data.data">
           <input type="text" placeholder="ID: 如phodal" ng-model="data.uid">
           <button class="button button-block button-positive" ng-click="post(data)">发送</button>
         </form>
       </div>
+    </div>
+    <div class="card">
+      <pre>{{master}}</pre>
     </div>
   </ion-content>
 </ion-view>

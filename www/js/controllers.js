@@ -3,12 +3,15 @@ angular.module('starter.controllers', [])
 .controller('HomeCtrl', function($scope) {})
 
 .controller('FlaskCtrl', function($scope, $http) {
-    $scope.get_id = 'phodal';
+    $scope.master = {};
+
     $scope.get = function(uid) {
-      $scope.master = angular.copy(uid);
+      $http.get('http://mqtt.phodal.com/topics/' + uid).success(function(data){
+        $scope.master = angular.copy(data);
+        console.log(data);
+      });
     };
     $scope.post = function(data) {
-      console.log(data);
       $scope.master = angular.copy(data);
     };
   })
