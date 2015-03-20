@@ -71,6 +71,16 @@ angular.module('starter', ['ionic','hc.marked', 'starter.controllers', 'starter.
         controller: 'AccountCtrl'
       }
     }
+  })
+
+  .state('tab.flask', {
+    url: '/flask',
+    views: {
+      'tab-flask': {
+        templateUrl: 'templates/tab-flask.html',
+        controller: 'FlaskCtrl'
+      }
+    }
   });
 
   $urlRouterProvider.otherwise('/tab/home');

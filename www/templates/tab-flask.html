@@ -1,0 +1,27 @@
+<ion-view view-title="实验室">
+  <ion-content>
+    <div class="card">
+      <div class="item item-body">
+        <div marked ng-include="'assets/flask.md'"></div>
+        网址: <a href="#" onclick="window.open('http://mqtt.phodal.com', '_system');">http://mqtt.phodal.com</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="item item-divider">
+        获取
+      </div>
+      <div class="item item-input">
+        <input type="text" placeholder="ID: 如phodal">
+        <button class="button button-small">获取</button>
+      </div>
+      <div class="item item-divider">
+        发送
+      </div>
+      <div class="item item-input">
+        <input type="text" placeholder="数据">
+        <input type="text" placeholder="ID: 如phodal">
+        <button class="button button-small">发送</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

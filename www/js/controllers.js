@@ -2,6 +2,8 @@ angular.module('starter.controllers', [])
 
 .controller('HomeCtrl', function($scope) {})
 
+.controller('FlaskCtrl', function($scope) {})
+
 .controller('BlogCtrl', function($scope, Blog) {
   $scope.blogs = Blog.all();
 })
