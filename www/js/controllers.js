@@ -8,11 +8,12 @@ angular.module('starter.controllers', [])
     $scope.get = function(uid) {
       $http.get('http://mqtt.phodal.com/topics/' + uid).success(function(data){
         $scope.master = angular.copy(data);
-        console.log(data);
+        console.log($scope.master);
       });
     };
     $scope.post = function(data) {
       $scope.master = angular.copy(data);
+      console.log($scope.master);
     };
   })
 
