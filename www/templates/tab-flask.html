@@ -11,16 +11,20 @@
         获取
       </div>
       <div class="item item-input">
-        <input type="text" placeholder="ID: 如phodal">
-        <button class="button button-small">获取</button>
+        <form name="getData" action="#" ng-controller="FlaskCtrl">
+          <input type="text" placeholder="ID: 如phodal" ng-model="uid">
+          <button class="button button-block button-positive" ng-click="get(uid)">获取</button>
+        </form>
       </div>
       <div class="item item-divider">
         发送
       </div>
       <div class="item item-input">
-        <input type="text" placeholder="数据">
-        <input type="text" placeholder="ID: 如phodal">
-        <button class="button button-small">发送</button>
+        <form name="postData" action="#" ng-controller="FlaskCtrl">
+          <input type="text" placeholder="数据" ng-model="data.data">
+          <input type="text" placeholder="ID: 如phodal" ng-model="data.uid">
+          <button class="button button-block button-positive" ng-click="post(data)">发送</button>
+        </form>
       </div>
     </div>
   </ion-content>
