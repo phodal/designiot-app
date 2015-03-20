@@ -2,18 +2,30 @@ angular.module('starter.controllers', [])
 
 .controller('HomeCtrl', function($scope) {})
 
-.controller('FlaskCtrl', function($scope, $http) {
+.controller('FlaskCtrl', function($scope, $http, transformRequestAsFormPost) {
     $scope.master = {};
+    $scope.url = 'http://mqtt.phodal.com/topics/';
 
     $scope.get = function(uid) {
-      $http.get('http://mqtt.phodal.com/topics/' + uid).success(function(data){
+      $http.get($scope.url + uid).success(function(data){
         $scope.master = angular.copy(data);
         console.log($scope.master);
       });
     };
     $scope.post = function(data) {
       $scope.master = angular.copy(data);
-      console.log($scope.master);
+      var url = $scope.url + data.uid,
+        data = data.data,
+        postCfg = {
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
+          transformRequest: transformRequestAsFormPost
+        };
+
+      console.log(url,data);
+      $http.post(url, data, postCfg)
+        .success(function(){
+          $scope.master = {'status': 'success'};
+        });
     };
   })
 
