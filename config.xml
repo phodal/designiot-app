@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.phodal.designiot" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" versionCode="101">
-  <name>物联网系统设计</name>
+  <name>教你设计物联网</name>
   <description>
-  设计物联网系统是件有意思的事情，它需要考虑到软件、硬件、通讯等多个不同方面。通过探索不同的语言，不同的框架，从而形成不同的解决方案。
+    这是一本书，确切地说是电子书《一步步搭建物联网系统》的APP版，并且我们在其中提供了实验室功能，当前允许模拟简单的http请求。
 
-  在这里，我们将对设计物联网系统有一个简单的介绍，并探讨如何设计一个最小的物联网系统
+    设计物联网系统是件有意思的事，它需要考虑到软件、硬件、通讯等多个方面。通过探索不同的语言、不同的框架，从而形成不同的解决方案。
+    在这里，我们将向您简单介绍物联网系统设计，并将带领您一步一步搭建简单的物联网系统。
   </description>
   <author email="h@phodal.com" href="http://www.phodal.com/">
     Phodal Huang
