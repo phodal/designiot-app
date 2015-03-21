@@ -2,6 +2,11 @@ angular.module('starter', ['ionic','hc.marked', 'starter.controllers', 'starter.
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
+    if (typeof analytics !== 'undefined'){
+      analytics.startTrackerWithId('UA-60917659-4');
+    } else {
+      console.log("Google Analytics plugin could not be loaded.")
+    }
     if(window.plugins && window.plugins.AdMob) {
       var admob_key = device.platform == "Android" ? "ANDROID_PUBLISHER_KEY" : "IOS_PUBLISHER_KEY";
       var admob = window.plugins.AdMob;
