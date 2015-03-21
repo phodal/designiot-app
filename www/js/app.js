@@ -12,7 +12,7 @@ angular.module('starter', ['ionic','hc.marked', 'starter.controllers', 'starter.
       var admob = window.plugins.AdMob;
       admob.createBannerView(
         {
-          'publisherId': 'pub-3662578183051823',
+          'publisherId': 'ca-app-pub-3662578183051823/3416509805',
           'adSize': admob.AD_SIZE.BANNER,
           'bannerAtTop': false
         },
