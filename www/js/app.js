@@ -4,7 +4,6 @@ angular.module('starter', ['ionic', 'ngCordova', 'hc.marked', 'starter.controlle
   $ionicPlatform.ready(function() {
     if (typeof analytics !== 'undefined'){
       analytics.startTrackerWithId('UA-60917659-4');
-      analytics.trackView('App')
     } else {
       console.log("Google Analytics plugin could not be loaded.")
     }
