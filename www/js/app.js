@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic','hc.marked', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'ngCordova', 'hc.marked', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -12,7 +12,7 @@ angular.module('starter', ['ionic','hc.marked', 'starter.controllers', 'starter.
       var admob = window.plugins.AdMob;
       admob.createBannerView(
         {
-          'publisherId': 'ca-app-pub-3662578183051823/3416509805',
+          'publisherId': 'ca-app-pub-3662578183051823/5276849408',
           'adSize': admob.AD_SIZE.BANNER,
           'bannerAtTop': false
         },
