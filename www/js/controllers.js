@@ -1,8 +1,11 @@
 angular.module('starter.controllers', [])
 
-.controller('HomeCtrl', function($scope) {})
+.controller('HomeCtrl', function($scope) {
+    if(typeof analytics !== undefined) { analytics.trackView("Home Controller"); }
+  })
 
 .controller('FlaskCtrl', function($scope, $http, transformRequestAsFormPost) {
+    if(typeof analytics !== undefined) { analytics.trackView("FlaskCtrl"); }
     $scope.master = {};
     $scope.url = 'http://mqtt.phodal.com/topics/';
 
@@ -30,15 +33,18 @@ angular.module('starter.controllers', [])
   })
 
 .controller('BlogCtrl', function($scope, Blog) {
+    if(typeof analytics !== undefined) { analytics.trackView("BlogCtrl"); }
   $scope.blogs = Blog.all();
 })
 
 .controller('BlogDetailCtrl', function($scope, $stateParams, Blog) {
+    if(typeof analytics !== undefined) { analytics.trackView("BlogDetailCtrl"); }
     $scope.md ='assets/' + $stateParams.blogId + '.md';
     $scope.blog = Blog.get($stateParams.blogId);
 })
 
 .controller('AccountCtrl', function($scope) {
+    if(typeof analytics !== undefined) { analytics.trackView("AccountCtrl"); }
   $scope.settings = {
     enableFriends: true
   };
