@@ -50,7 +50,7 @@ angular.module('starter.controllers', [])
     $scope.blog = Blog.get($stateParams.blogId);
   })
 
-  .controller('AccountCtrl', function ($scope, $cordovaAppRate) {
+  .controller('AccountCtrl', function ($scope, $cordovaAppRate, $cordovaEmailComposer) {
     if (typeof analytics !== 'undefined') {
       analytics.trackView("AccountCtrl");
     }
@@ -62,7 +62,24 @@ angular.module('starter.controllers', [])
         $scope.words = result;
       })
     };
-    $scope.settings = {
-      enableFriends: true
-    };
+
+    $scope.sendMail = function () {
+      $cordovaEmailComposer.isAvailable().then(function () {
+        // is available
+      }, function () {
+        // not available
+      });
+
+
+      var email = {
+        to: 'h@phodal.com',
+        subject: '关于《教你设计物联网》',
+        body: '',
+        isHtml: true
+      };
+
+      $cordovaEmailComposer.open(email).then(null, function () {
+        // user cancelled email
+      });
+    }
   });
