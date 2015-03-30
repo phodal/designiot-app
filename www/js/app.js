@@ -38,7 +38,26 @@ angular.module('starter', ['ionic', 'ngCordova', 'hc.marked', 'starter.controlle
   });
 })
 
-.config(['markedProvider', function (markedProvider) {
+.config(function ($cordovaAppRateProvider) {
+  document.addEventListener("deviceready", function () {
+    var prefs = {
+      language: 'zh-Hans',
+      appName: '教你设计物联网',
+      androidURL: 'market://details?id=com.phodal.designiot'
+    };
+    var strings = {
+      title: '动动手指，为我们打分',
+      message: '无论是来自亲的赞美诗，还是让亲唾沫横飞的槽点，我们只愿——让评价来得更猛烈些吧！',
+      cancelButtonLabel: '残忍地拒绝',
+      laterButtonLabel: '容我考虑考虑',
+      rateButtonLabel: '马上就去'
+    };
+    $cordovaAppRateProvider.setCustomLocale(strings);
+    $cordovaAppRateProvider.setPreferences(prefs);
+  }, false);
+})
+
+  .config(['markedProvider', function (markedProvider) {
   markedProvider.setOptions({
     gfm: true,
     tables: true,
