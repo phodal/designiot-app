@@ -11,20 +11,16 @@
         获取
       </div>
       <div class="item item-input">
-        <form novalidate name="getData" action="#">
           <input type="text" placeholder="ID: 如phodal" ng-model="uid">
-          <button class="button button-block button-positive" ng-click="get(uid)">获取</button>
-        </form>
+          <button class="button  button-positive" ng-click="getData(uid)">获取</button>
       </div>
       <div class="item item-divider">
         发送
       </div>
       <div class="item item-input">
-        <form novalidate name="postData" action="#">
           <input type="text" placeholder="数据" ng-model="data.data">
           <input type="text" placeholder="ID: 如phodal" ng-model="data.uid">
-          <button class="button button-block button-positive" ng-click="post(data)">发送</button>
-        </form>
+          <button class="button button-positive" ng-click="postData(data)">发送</button>
       </div>
     </div>
     <div class="card">

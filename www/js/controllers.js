@@ -13,13 +13,12 @@ angular.module('starter.controllers', [])
     $scope.master = {};
     $scope.url = 'http://mqtt.phodal.com/topics/';
 
-    $scope.get = function (uid) {
+    $scope.getData = function (uid) {
       $http.get($scope.url + uid).success(function (data) {
         $scope.master = angular.copy(data);
-        console.log($scope.master);
       });
     };
-    $scope.post = function (data) {
+    $scope.postData = function (data) {
       $scope.master = angular.copy(data);
       var url = $scope.url + data.uid,
         data = data.data,
@@ -56,7 +55,6 @@ angular.module('starter.controllers', [])
     }
     $scope.promptRating = function () {
       $cordovaAppRate.promptForRating(true).then(function (result) {
-        console.log("result: " + result);
         $scope.words = result;
       }, function (error) {
         $scope.words = result;
