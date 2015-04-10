@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.phodal.designiot" version="0.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" versionCode="112">
+<widget id="com.phodal.designiot" version="0.2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" versionCode="112">
   <name>教你设计物联网</name>
   <description>
     这是一本书，确切地说是电子书《一步步搭建物联网系统》的APP版，并且我们在其中提供了实验室功能，当前允许模拟简单的http请求。

@@ -13,7 +13,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'hc.marked', 'starter.controlle
       var admob = window.plugins.AdMob;
       admob.createBannerView(
         {
-          'publisherId': 'ca-app-pub-3662578183051823/5276849408',
+          'publisherId': 'ca-app-pub-3662578183051823/3416509805',
           'adSize': admob.AD_SIZE.BANNER,
           'bannerAtTop': false
         },
