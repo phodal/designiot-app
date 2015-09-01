@@ -27,7 +27,7 @@ angular.module('starter.controllers', [])
           transformRequest: transformRequestAsFormPost
         };
 
-      $http.post(url, data, postCfg)
+      $http.put(url, data, postCfg)
         .success(function () {
           $scope.master = {'status': 'success'};
         });
