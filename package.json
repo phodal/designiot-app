@@ -15,6 +15,11 @@
     "shelljs": "^0.3.0"
   },
   "cordovaPlugins": [
-    "com.rjfun.cordova.plugin.admob"
+    "com.rjfun.cordova.plugin.admob",
+    "com.google.playservices"
+  ],
+  "cordovaPlatforms": [
+    "android",
+    "ios"
   ]
 }
