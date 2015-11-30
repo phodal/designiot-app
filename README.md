@@ -25,3 +25,11 @@ Add AndroidManifest.xml
           <category android:name="android.intent.category.BROWSABLE" />
           <data android:host="designiot.phodal.com" android:scheme="http" />
       </intent-filter>
+
+
+##Cordova Plugin Lists
+
+- cordova plugin add https://github.com/katzer/cordova-plugin-email-composer.git
+- cordova plugin add com.google.playservices@19.0.0
+- cordova plugin add https://github.com/floatinghotpot/cordova-plugin-admob.git
+- cordova plugin add https://github.com/pushandplay/cordova-plugin-apprate.git
